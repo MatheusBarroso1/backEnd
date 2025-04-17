@@ -2,7 +2,7 @@ package br.com.projetoBase.dto;
 
 import java.util.Date;
 
-public record UsuarioCadastro(long id,String user, String pass, String nome, String telefone,  Date DataNascimento, String cpf) {
+public record RetornoUsuario(long id,String user,String tipoUsuario, String nome, String telefone,  Date DataNascimento) {
     
 	public long id() {
 		return id;
@@ -11,12 +11,12 @@ public record UsuarioCadastro(long id,String user, String pass, String nome, Str
 	public String user() {
         return user;
     }
+	
+    public String tipoUsuario() {
+		return tipoUsuario;
+	}
 
-    public String pass() {
-        return pass;
-    }
-
-    public String nome() {
+	public String nome() {
         return nome;
     }
 
@@ -27,5 +27,4 @@ public record UsuarioCadastro(long id,String user, String pass, String nome, Str
 	public Date DataNascimento() {
 		return DataNascimento;
 	}
-    
 }

@@ -2,7 +2,9 @@ package br.com.projetoBase.dto;
 
 import java.util.Date;
 
-public record UsuarioCadastro(long id,String user, String pass, String nome, String telefone,  Date DataNascimento, String cpf) {
+import br.com.projetoBase.modelo.Clinica;
+
+public record FuncCordeCadastro(long id,String user, String pass, String nome, String telefone,  Date DataNascimento, long clinicaId, String cpf) {
     
 	public long id() {
 		return id;
@@ -27,5 +29,10 @@ public record UsuarioCadastro(long id,String user, String pass, String nome, Str
 	public Date DataNascimento() {
 		return DataNascimento;
 	}
+
+	public long clinicaId() {
+		return clinicaId;
+	}
+	
     
 }
